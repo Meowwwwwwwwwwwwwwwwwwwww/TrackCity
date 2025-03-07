@@ -1,0 +1,262 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home-TrackCity</title>
+  <style>
+    /*font family*/
+    /* basic styling suru*/
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap');
+    @media screen and (max-width: 1410px) {}
+
+    :root {
+      --themered: #ffffff;
+      --gray: #efefef;
+    }
+
+    html {
+      scroll-behavior: smooth;
+
+    }
+
+    button,
+    body {
+      font-family: 'Poppins', sans-serif;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    p {
+      font-size: 14px;
+      line-height: 26px;
+
+    }
+
+    .fullcontainer {
+      width: 100%;
+
+
+    }
+
+    .container {
+      width: device-width;
+      margin: auto;
+      color: white;
+      border-color: rgb(255, 255, 255);
+    }
+
+
+
+
+    /*basix styling end*/
+
+    /*home ki styling*/
+
+
+    header {
+      width: 100%;
+      background-color: rgb(255, 255, 255);
+      position: fixed;
+      z-index: 2;
+      height: 0px;
+      background-image: url("{% static 'city.jpg' %}");
+    }
+
+    .header:hover {
+      height: 100px;
+      transition: 0.5s;
+      opacity: 0.3;
+    }
+
+    header .container {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    header .container .logo {
+      padding: 15px 0;
+      height: 75px;
+    }
+
+    header .container .logo img {
+      height: 100%;
+
+    }
+
+    header nav ul {
+      list-style-type: none;
+    }
+
+    header nav ul li {
+      display: inline-block;
+    }
+
+    header nav ul li a {
+      display: inline-block;
+      height: 45px;
+      line-height: 75px;
+      padding: 0 15px;
+      text-decoration: none;
+      text-transform: capitalize;
+      font-size: 20px;
+      color: #ffffff;
+      transition: 0.7s;
+      border-radius: 10px;
+      margin-right: 18px;
+      margin-top: 0px;
+      font-style: bold;
+      text-shadow: 0 0 5px #000;
+    }
+
+    header nav ul li a:hover {
+      color: #000000;
+      text-shadow: 0 6px 10px #fff;
+      transition: 1s;
+      font-size: 25px;
+    }
+
+    .banner {
+      min-height: 100vh;
+      width: 100%;
+      background-image: url("{% static 'city.jpg' %}");
+      background-size: cover;
+      background-attachment: fixed;
+
+    }
+
+
+    .banner h1 {
+      margin-top: 230px;
+      display: inline-block;
+      font-size: 3.5rem;
+      color: #fff;
+      text-shadow: 0 8px 15px #000;
+      width: 50%;
+      line-height: 4.2rem;
+      font-weight: 100;
+      margin-left: 150px;
+      transition: 1s;
+    }
+
+    .banner h1:hover {
+      margin-top: 230px;
+      display: inline-block;
+      font-size: 6.2rem;
+      color: #fff;
+      text-shadow: 0 10px 20px #ffffff;
+      width: 50%;
+      line-height: 4.2rem;
+      font-weight: 100;
+      margin-left: 150px;
+      transition: 1s;
+    }
+
+    .banner h1 span {
+      background-color: var(--themered);
+      display: inline-block;
+      line-height: 3.5rem;
+      padding: 0 15px;
+      font-weight: 600;
+      border-radius: 5px;
+
+    }
+
+
+    .banner p {
+      color: #fff;
+      width: 50%;
+      text-shadow: 0 8px 15px #000;
+      margin-top: 10px;
+      margin-left: 150px;
+    }
+
+    .banner p:hover {
+      color: #fff;
+      width: 50%;
+      text-shadow: 0 10px 20px #ffffff;
+      margin-top: 10px;
+      margin-left: 150px;
+    }
+
+    .banner .button-link {
+      text-decoration: none;
+    }
+
+    .banner .button-link button {
+      outline: none;
+    }
+
+    .banner button {
+      background-color: var(--themered);
+      box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.838), 0px 3px;
+      border: 0;
+      outline: none;
+      color: #000000;
+      border-radius: 5px;
+      padding: 10px 15px;
+      margin-top: 20px;
+      font-size: 13px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: 0.4s;
+      margin-left: 150px;
+    }
+
+    .banner button:hover {
+      box-shadow: 4px 4px 4px rgba(255, 255, 255, 0.838), 2px 3px;
+      transition: 0.3s;
+    }
+
+    /*home ki styling end*/
+  </style>
+  <script src="https://kit.fontawesome.com/dd1d2b31ed.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+  <div class="fullcontainer banner" id="homesection">
+    <header>
+      <div class="container">
+        <div class="logo">
+        </div>
+        <nav>
+          <ul>
+            <li>
+              <a href="{% url 'login' %}">Login</a>
+            </li>
+            <li>
+              <a href="{% url 'register' %}">Signup</a>
+            </li>
+        </nav>
+      </div>
+    </header>
+    <div class="container">
+      <h1>TᖇᗩᑕKᑕITY</h1>
+      
+      <p class="text">
+      TrackCity is an innovative online platform designed to bridge the gap between citizens and government institutions. It empowers individuals to directly report issues, submit grievances, and offer suggestions to local authorities, fostering better communication and transparency within urban governance. Whether it’s a road repair request, waste management concerns, or a suggestion for community development, TrackCity provides a user-friendly interface that allows citizens to make their voices heard.
+    </p>
+    <a href="#aboutsection">
+      <button class="start">
+      Learn More!
+      </button>
+    </a>
+    <a href="#aboutsection">
+
+      </a>
+    </div>
+
+
+  </div>
+</body>
+
+
+
+</html>

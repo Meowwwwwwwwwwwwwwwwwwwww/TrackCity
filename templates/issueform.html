@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TrackCity-Report</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: 'Poppins', sans-serif;
+    }
+    
+    body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        background: linear-gradient(to right, #6a11cb, #2575fc);
+    }
+    
+    .fullcontainer {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .fill {
+        background: white;
+        padding: 30px;
+        width: 400px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        border-radius: 10px;
+        text-align: center;
+    }
+    
+    h1 {
+        color: #333;
+        margin-bottom: 20px;
+    }
+    
+    .comment-container h2 {
+        color: #444;
+        margin-bottom: 10px;
+    }
+    
+    textarea {
+        width: 100%;
+        height: 100px;
+        padding: 10px;
+        border: 2px solid #ddd;
+        border-radius: 5px;
+        resize: none;
+        outline: none;
+        transition: border-color 0.3s;
+    }
+    
+    textarea:focus {
+        border-color: #6a11cb;
+    }
+    
+    button {
+        margin-top: 10px;
+        padding: 10px 15px;
+        border: none;
+        background: #6a11cb;
+        color: white;
+        font-size: 16px;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background 0.3s ease-in-out;
+    }
+    
+    button:hover {
+        background: #2575fc;
+    }
+    
+    #commentSection {
+        margin-top: 20px;
+        padding: 10px;
+        background: #f9f9f9;
+        border-radius: 5px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+    
+    </style> 
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <script src="https://kit.fontawesome.com/dd1d2b31ed.js" crossorigin="anonymous"></script>
+  </head>
+  <body>
+    <div class="fullcontainer banner" id="homesection">
+       <div class="fill"  id="fill-form">
+       
+          <h1>Report the Issue</h1>
+          
+          <!--password if required-->
+          <!---
+          <div class="input-box">
+            <input type="password" placeholder="password" required>
+            <i class='bx bxs-lock-alt' ></i>
+          </div>
+        -->
+
+          
+          
+
+            <center>
+            <div class="comment-container">
+              
+              <form action="" method="post">
+                {% csrf_token %}
+                <textarea name="description" placeholder="Write your Issue here..."></textarea>
+                <button type="submit">Submit</button>
+              </form>
+              
+              <div id="commentSection"></div>
+              </div>
+              </center>
+          </div>
+        </div>
+
+
+        
+
+       </div>
